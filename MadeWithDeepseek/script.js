@@ -15,11 +15,10 @@
             }, 140); 
         });
     }
-    
     async function simulateLoading() {
         for (const message of messages) {
-            await typeMessage(message.text + '\n', message.delay);
             await typeMessage("> " + entry.text); 
+            await typeMessage(message.text + '\n', message.delay);
         }
     }
     
