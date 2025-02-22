@@ -1,8 +1,7 @@
 const messages = [
     { text: "Initializing system...", delay: 1000 }, 
     { text: "Loading services...", delay: 1500 },
-    { text: "Loading Log Modules...", delay: 3000 },     
-    { text: "Starting services...", delay: 3000 },  
+    { text: "Loading Log Modules...", delay: 3000 },      
     { text: "Starting Datacenter Log Input Module...", delay: 2500 },  
     { text: "Starting Core Temperature Log Input Module...", delay: 2300 }, 
     { text: "Starting Core Lasers Log Input Module...", delay: 2266 },  
