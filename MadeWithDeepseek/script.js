@@ -12,7 +12,7 @@
                     clearInterval(interval);
                     setTimeout(resolve, delay);
                 }
-            }, 100); 
+            }, 140); 
         });
     }
     
