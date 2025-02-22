@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Prevent body scroll */
 }
 
 .terminal {
@@ -16,11 +17,11 @@ body {
     background-color: #000;
     border: 2px solid limegreen;
     padding: 20px;
-    overflow: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    word-wrap: break-word;
 }
 
 pre {
     margin: 0;
-    white-space: pre-wrap;
-    word-wrap: break-word;
 }
