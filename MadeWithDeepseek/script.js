@@ -17,8 +17,7 @@
     }
     async function simulateLoading() {
         for (const message of messages) {
-            await typeMessage("> " + message.text, message.delay); 
- "await typeMessage(message.text + '\n', message.delay);"
+            await typeMessage("> " + message.text + '\n', message.delay); 
         }
     }
     
