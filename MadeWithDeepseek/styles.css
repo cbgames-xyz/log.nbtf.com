@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    color: limegreen;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    width: 80%;
+    height: 60%;
+    background-color: #000;
+    border: 2px solid limegreen;
+    padding: 20px;
+    overflow: hidden;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

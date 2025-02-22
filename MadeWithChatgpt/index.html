@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Terminal</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            padding: 20px;
+        }
+        #terminal {
+            width: 80%;
+            height: 400px;
+            overflow-y: auto;
+            border: 2px solid lime;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
 
+<div id="terminal"></div>
+
+<script>
+    const terminal = document.getElementById("terminal");
+
+    const fakeLogs = [
+        "Initializing system...",
+        "Loading environment variables...",
+        "Connecting to localhost...",
+        "Verifying dependencies...",
+        "Executing script.bat...",
+        "Checking user permissions...",
+        "Fetching data from API...",
+        "Processing request...",
+        "Compiling assets...",
+        "Operation completed successfully!"
+    ];
+
+    function fakeTypeLog(log, delay = 50) {
+        return new Promise((resolve) => {
+            let index = 0;
+            const interval = setInterval(() => {
+                terminal.innerHTML += log[index];
+                index++;
+                if (index === log.length) {
+                    clearInterval(interval);
+                    terminal.innerHTML += "<br>";
+                    terminal.scrollTop = terminal.scrollHeight;
+                    resolve();
+                }
+            }, delay);
+        });
+    }
+
+    async function runFakeTerminal() {
+        for (const log of fakeLogs) {
+            await fakeTypeLog("> " + log);
+            await new Promise(res => setTimeout(res, 500));
+        }
+    }
+
+    runFakeTerminal();
+</script>
+
+</body>
+</html>
