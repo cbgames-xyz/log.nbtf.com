@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Blast Logging Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .pill {
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 10px;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .red-pill {
+            background-color: #ff0000;
+        }
+        .red-pill:hover {
+            background-color: #cc0000;
+        }
+        .blue-pill {
+            background-color: #0000ff;
+        }
+        .blue-pill:hover {
+            background-color: #0000cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Path</h1>
+        <p>You take the red pill—you go to the logging home screen but made with ChatGPT</p>
+        <p>You take the blue pill—you go to the logging home screen but made with DeepSeek</p>
+        <p>ChatGPT @ v1.5 | DeepSeek @ v3</p>
+        <div>
+            <a href="./MadeWithChatgpt/index.html" class="pill red-pill">Red Pill</a>
+            <a href="./MadeWithDeepseek/index.html" class="pill blue-pill">Blue Pill</a>
+        </div>
+    </div>
+</body>
+</html>
